@@ -25,11 +25,11 @@ const startServer = async () => {
     console.log('✅ Connected to MongoDB');
 
     // Seed initial data if the collection is empty
-    const count = await Course.countDocuments();
-    if (count === 0) {
-      await Course.insertMany(initialCourses);
-      console.log('📌 Initial courses data seeded successfully');
-    }
+    // const count = await Course.countDocuments();
+    // if (count === 0) {
+    //   await Course.insertMany(initialCourses);
+    //   console.log('📌 Initial courses data seeded successfully');
+    // }
 
     // Routes
     app.use('/api', courseRoutes);
